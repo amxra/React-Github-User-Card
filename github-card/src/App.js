@@ -48,6 +48,12 @@ class App extends React.Component {
     return (
       <div className = "app">
         <h2>GitHub Card</h2>
+        <User setMainUser={this.setMainUser}
+         user={this.state.mainUser}/>
+         <Person setUsers={this.setUsers}
+         addCard={this.addCard}
+         users={this.state.users}/>
+
       </div>
     )
   }
