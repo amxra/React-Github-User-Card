@@ -2,7 +2,18 @@ import React from 'react';
 import './App.css';
 import Person from "./components/person";
 import User from "./components/user";
-import axios from "axios"
+import axios from "axios";
+import styled from "styled-components";
+
+const MainStyle = styled.div `
+  text-align: center;
+  margin-top: 3rem;
+  
+  h1{
+    color: red;
+  }
+
+`
 
 
 
@@ -46,15 +57,16 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className = "app">
-        <h2>GitHub Card</h2>
+      <MainStyle>
+      <div>
+        <h1>GitHub User Card</h1>
         <User setMainUser={this.setMainUser}
          user={this.state.mainUser}/>
          <Person setUsers={this.setUsers}
          addCard={this.addCard}
          users={this.state.users}/>
-
       </div>
+      </MainStyle>
     )
   }
 }
