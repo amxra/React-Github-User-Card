@@ -2,7 +2,7 @@ import React from 'react';
  import axios from 'axios';
  import UserCard from './UserCard';
 
-  class MainUser extends React.Component {
+  class User extends React.Component {
 
       componentDidMount() {
          axios.get(`https://api.github.com/users/amxra`)
@@ -21,4 +21,4 @@ import React from 'react';
      }
  }
 
-  export default MainUser; 
+  export default User; 
